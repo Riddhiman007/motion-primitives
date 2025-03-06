@@ -17,7 +17,10 @@ const MOTION_PRIMITIVES_REGISTRY_URL =
 const MOTION_PRIMITIVES_BASE_URL =
   'https://raw.githubusercontent.com/ibelick/motion-primitives/main/';
 
-const TARGET_DIR = 'components/motion-primitives';
+// support for src dir
+const TARGET_DIR = existsSync('src')
+  ? 'src/components/motion-primitives'
+  : 'components/motion-primitives';
 
 interface FileEntry {
   path: string;
